@@ -1,0 +1,211 @@
+''cisco
+SwitchV1#show running-config
+Building configuration...
+
+Current configuration : 1445 bytes
+!
+version 15.0
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname SwitchV1
+!
+enable secret 5 $1$mERr$NARFGJytzNQ.L1OAZ.TVE/
+!
+!
+!
+ip domain-name technova.local
+!
+username admin secret 5 $1$mERr$utpaolbMRqN3Da.20CpfB/
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+interface FastEthernet0/1
+!
+interface FastEthernet0/2
+!
+interface FastEthernet0/3
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ ip address 192.168.10.2 255.255.255.0
+!
+interface Vlan10
+ ip address 192.168.10.2 255.255.255.0
+!
+ip default-gateway 192.168.10.1
+!
+!
+!
+!
+line con 0
+ password 7 08315442
+ login
+!
+line vty 0 4
+ password 7 08315442
+ login local
+ transport input ssh
+line vty 5 15
+ password 7 08315442
+ login local
+ transport input ssh
+!
+!
+!
+!
+end
+''cisco
+SwitchV2#show running-config
+Building configuration...
+
+Current configuration : 1421 bytes
+!
+version 15.0
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname SwitchV2
+!
+enable secret 5 $1$mERr$NARFGJytzNQ.L1OAZ.TVE/
+!
+!
+!
+ip domain-name technova.local
+!
+username admin secret 5 $1$mERr$Z3/vH0ioNbMjnNMEXqcma1
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+interface FastEthernet0/1
+!
+interface FastEthernet0/2
+!
+interface FastEthernet0/3
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+ tx-ring-limit 20
+!
+interface GigabitEthernet0/2
+ tx-ring-limit 20
+!
+interface Vlan1
+ ip address 192.168.2.2 255.255.255.0
+!
+ip default-gateway 192.168.2.1
+!
+!
+!
+!
+line con 0
+ password 7 08315442
+ login
+!
+line vty 0 4
+ password 7 08315442
+ login local
+ transport input ssh
+line vty 5 15
+ password 7 08315442
+ login local
+ transport input ssh
+!
+!
+!
+!
+end
